@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{inputenc}
+\usepackage{geometry}
+\geometry{legalpaper, portrait, margin=1in}
+\begin{document}
+APHY250
+
+Homework 5 
+
+Dylan VanAllen 
+
+Chapter 7. Anharmonic Vibrations 
+\begin{itemize}
+    \item 7.2) a) A simple pendulum is set into vibration with an 
+    amplitude of exactly \(45^\circ\). Calculate its frequency 
+    in terms of \(\nu_0\).
+    \begin{align*}
+        \omega_f &\approx \omega_0(1-\frac{1}{16}A^2) \tag{7.11}\\
+        2\pi f &= 2\pi\nu_0(1-\frac{1}{16}A^2) \\
+        f &= \nu_0\left(1-\frac{1}{16}(\frac{\pi}{4})^2\right) = 0.961\nu_0
+    \end{align*} 
+    \begin{itemize}
+        \item b) The amplitude gradually decreases as a consequence of light 
+        damping by the air, and so the frequency gradually rises towards the 
+        value \(\nu_0\). Calculate the amplitude when the frequency is \(0.990\nu_0\). 
+        (Assume that the damping affects the frequency \emph{only} by changing the amplitude.)
+        \begin{align*}
+            1-\frac{1}{16}A^2 &= 0.990 \\
+            \frac{1}{16}A^2 &= 0.01 \\
+            A = \sqrt{0.16} &= 0.4 \ rad
+        \end{align*}
+        \item c) If the damping width \(\gamma\) is \(0.0240 s^{-1}\), Calculate the 
+        time taken for the amplitude to fall to the value found in (b).
+        
+        \begin{align*}
+            \gamma &\approx -\frac{1}{\langle W\rangle} \frac{d\langle W\rangle}{dt} \tag{3.13} \\
+            dt &= -\frac{1}{\langle W\rangle} \frac{d\langle W\rangle}{\gamma} \\
+            \frac{d\langle W\rangle}{\langle W \rangle} &= \frac{A_2^2-A_1^2}{A_1^2} = \frac{(0.4^2-\frac{\pi}{4})^2}{(\frac{\pi}{4})^2} = -0.74062 \\
+            dt &= -\frac{-0.74062}{0.0240} = 30.9 \ s
+        \end{align*}
+    \end{itemize}
+
+    \item 7.4) For a vibration governed by the quadratic force (7.12), 
+    show that the mass swings farther out on the 'soft' side than on
+    the 'hard' side, by an amount \(\frac{2}{3}\beta A^2\).
+    \begin{equation}
+        -F_s=(1+\beta \psi)s\psi \tag{7.12}
+    \end{equation}
+    \begin{align*}
+        \psi &= A(\cos(\omega_f t)+\eta\cos(2\omega_f t)+..) \\
+        \dot{\psi} &= -A\omega_f\left(\sin(\omega_f t)+2\eta\sin(\omega_f t)+...\right) = 0 
+    \end{align*}
+    When \(\dot{\psi}=0, \quad t = 0, \pi, 2\pi, ...\). \(\psi\), where \(\psi\) is at a max at 0, min at 
+    \(\pi\), a max at \(2\pi\), etc.
+    
+    At \(t = 0\), \(\psi = A(1+\eta)\). At \(t = \pi\), \(\psi=A(1-\eta)\). 
+    \begin{align*}
+        \psi(0)-\psi(\pi)=A+A\eta-(A-A\eta)=\frac{A^2\beta}{6}+\frac{A^2\beta}{6}=\frac{A^2\beta}{3}
+    \end{align*}
+    \item 7.6) The force between two neutral atoms or molecules is sometimes 
+    represented by a potential of the form
+    \begin{equation*}
+        V(r)=w\left[-2\left(\frac{R}{r}\right)^6+\left(\frac{R}{r}\right)^{12}\right]
+    \end{equation*}
+    where \(R\) is the bond length and \(w\) is the constant energy (the well depth).
+    \begin{itemize}
+        \item Show that \(sR^2=72w\) and \(\beta R=-10.5\) for this potential, where \(s\) and
+        \(\beta\) have the same meanings as in the text (7.12).
+        \begin{align*}
+            \frac{dV}{dr} &= w\left(\frac{12R^6}{r^7}-\frac{12R^{12}}{r^{13}}\right) \\
+            \frac{d^2V}{dr^2} &= -w\left(\frac{84R^6}{r^8}-\frac{156R^{12}}{r^{14}}\right) \\
+            \frac{d^3V}{dr^3} &= w\left(\frac{672R^6}{r^9}-\frac{2184R^{12}}{r^{15}}\right) \\
+        \end{align*}
+        \begin{align*}
+            s &= \left(\frac{d^2V}{dr^2}\right)_R \tag{2.14} \\
+            s &= w\frac{72}{R^2} \\
+            sR^2 &= 72w \\
+        \end{align*}
+        \begin{align*}
+            \beta &=\frac{1}{2}\left(\frac{d^3V}{dr^3}\right)_R / \left(\frac{d^2V}{dr^2}\right)_R \tag{7.23}\\
+            \beta &= \frac{1}{2} \frac{-1512}{R^3} / (\frac{-72}{R^2}) = \frac{21}{2R} \\
+            \beta R &= 10.5
+        \end{align*}
+        \item Show that the average distance between the two atoms should increase by a fraction
+        of \(\frac{0.15k}{w}\) for every 1 K rise in temperature, where \(k\) is the Boltzmann
+        constant.
+        \begin{align*}
+            \frac{d\langle r\rangle}{dT} &\approx -\frac{\beta k}{s} \\
+            \text{When dT=1, } d\langle r\rangle &= \frac{\frac{10.5}{R} k}{w\frac{72}{R^2}} \\
+            &= \frac{0.15k}{w}R
+        \end{align*}
+        \item The coefficient of linear expansion of a certain solid is \(0.001 K^-1\). Estimate 
+        the well depth \(w\) for a pair of atoms of the same element.
+        \begin{align*}
+            \alpha_R &= \frac{1}{R}\frac{dR}{dT} = \frac{0.15k}{w} \\
+            w &= \frac{0.15k}{\alpha_R} = \frac{0.15 \cdot 1.38064852 \times 10^{-23}}{0.001}=2.071\times10^{-21} m
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+\end{document}

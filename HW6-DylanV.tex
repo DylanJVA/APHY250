@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\geometry{legalpaper, portrait, margin=1in}
+\graphicspath{{images/}}
+\begin{document}
+APHY250
+
+Homework 6 
+
+Dylan VanAllen 
+
+Chapter 8. Two-Coordinate Vibrations
+\begin{enumerate}
+    \item (8.1) For the symmetric system (fig 8.1) with weak coupling \(S << s\) show that the fraction by which the larger mode frequency exceeds the smaller mode frequency is approximately \(\frac{S}{s}\).
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=12cm]{8.1.jpg}
+    \end{figure}
+    \begin{align*}
+        \omega_1 &\equiv (s/m)^{1/2} \tag{8.3} \\
+        \omega_2 &\equiv [(s+2S)/m]^{1/2} \tag{8.4} \\
+        \frac{\omega_2}{\omega_1} &=\frac{[(s+2S)/m]^{1/2}}{(s/m)^{1/2}} \\
+        &= \left(\frac{(s+2S)/m}{(s/m)}\right)^{1/2} \\
+        &= \left(\frac{(s+2S)}{s}\right)^{1/2} \\
+        &= \left(1+\frac{2S}{s}\right)^{1/2} \\
+        &=\frac{S}{s}+\frac{1}{2}
+    \end{align*}
+    \item (8.2) At a certain instant during the vibration of the symmetric system (fig 8.1) the mode coordinates have the values \(q_1 = 1.36\times10^{-3} \ \text{kg}^{1/2}\)m and \(q_2 = -0.34\times10^{-3} \ \text{kg}^{1/2}\)m. Calculate \(\psi_1\) and \(\psi_2\) at the same instant if \(m=0.020 \ kg\). 
+    \begin{align*}
+        
+    \end{align*}
+    \item (8.4) If the system in fig 8.8 has \(m_1 = 3m_2\) and \(s_1 = s_2=2S\), find:
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=12cm]{8.8.jpg}
+    \end{figure}
+    \begin{itemize}
+        \item (a) The amplitude ratio \(\frac{A_2}{A_1}\) for the 'in-phase' mode
+        \item (b) the amplitude ratio \(\frac{A_2}{A_1}\) for the 'in-antiphase' mode
+        \item (c) the ratio of the mode frequencies
+    \end{itemize}
+    \item (8.6) Two identical simple pendulums are connected by a light spring attached to the bobs. Each bob has a mass of \(1.00\) kg, and the stiffness of the coupling spring is \(0.800\) N\(\text{m}^-1\). When one pendulum is clamped, the period of the other is found to be \(1.25\) s. Find the periods of the two modes of the system with the clamp removed. 
+    \item Consider 4 identical simple pendulums, equally spaced on a row, and all masses are linked by identical light springswith a force constant \(s\) such that when not in vibrations all pendulums remain vertical. Use the method of transverse standing waves, find the four normal modes of this four-coordinate system and comment on their angular frequencies.
+
+\end{enumerate}
+\end{document}
