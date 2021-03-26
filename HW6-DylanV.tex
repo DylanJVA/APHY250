@@ -22,15 +22,19 @@ Chapter 8. Two-Coordinate Vibrations
     \begin{align*}
         \omega_1 &\equiv (s/m)^{1/2} \tag{8.3} \\
         \omega_2 &\equiv [(s+2S)/m]^{1/2} \tag{8.4} \\
-        \frac{\omega_2}{\omega_1} &=\frac{[(s+2S)/m]^{1/2}}{(s/m)^{1/2}} \\
-        &= \left(\frac{(s+2S)/m}{(s/m)}\right)^{1/2} \\
-        &= \left(\frac{(s+2S)}{s}\right)^{1/2} \\
-        &= \left(1+\frac{2S}{s}\right)^{1/2} \\
-        &=\frac{S}{s}+\frac{1}{2}
+        &= \sqrt{\frac{s}{m}}\left(1+\frac{S}{s}\right) \\
+        \omega_2-\omega_1 &= \sqrt{\frac{s}{m}}\left(1+\frac{S}{s}\right)-\sqrt{\frac{s}{m}} \\
+        &=\sqrt{\frac{s}{m}}\left(1+\frac{S}{s}\right)-\sqrt{\frac{s}{m}}\\
+        \frac{\omega_2-\omega_1}{\omega_1} &=1+\frac{S}{s}-1=\frac{S}{s}
     \end{align*}
     \item (8.2) At a certain instant during the vibration of the symmetric system (fig 8.1) the mode coordinates have the values \(q_1 = 1.36\times10^{-3} \ \text{kg}^{1/2}\)m and \(q_2 = -0.34\times10^{-3} \ \text{kg}^{1/2}\)m. Calculate \(\psi_1\) and \(\psi_2\) at the same instant if \(m=0.020 \ kg\). 
     \begin{align*}
-        
+        \psi_1 &= \sqrt{\frac{1}{2m}}(q_1-q_2) \\
+        &= \sqrt{\frac{1}{2(0.02)}}(1.36\times 10^{-3}+0.34\times 10^{-3}) \\
+        &= 0.0085 m \\
+        \psi_2 &= \sqrt{\frac{1}{2m}}(q_1+q_2) \\ 
+        &= \sqrt{\frac{1}{2(0.02)}}(1.36\times 10^{-3}-0.34\times 10^{-3}) \\
+        &= 0.0051 m
     \end{align*}
     \item (8.4) If the system in fig 8.8 has \(m_1 = 3m_2\) and \(s_1 = s_2=2S\), find:
     \begin{figure}[h!]
@@ -39,11 +43,59 @@ Chapter 8. Two-Coordinate Vibrations
     \end{figure}
     \begin{itemize}
         \item (a) The amplitude ratio \(\frac{A_2}{A_1}\) for the 'in-phase' mode
+        \begin{equation*}
+            m_1=3m_2, \quad \quad s_1=s_2=2S
+        \end{equation*}
+        \begin{equation*}
+            \begin{split}
+                m_1\ddot{\psi_1}=-s\psi_1-S(\psi_1-\psi_2) \\
+                \ddot{\psi_1}+\frac{2S}{3m_2}\psi_1+\frac{S}{3m_2}(\psi_1-\psi_2)=0 \\
+                \psi_1=A_1\cos(\omega_1 t + \phi) \\ 
+                -\omega_1^2+\frac{2S}{3m_2}+\frac{S}{3m_2}(1+r)=0 \\
+                \omega_1^2=\frac{S}{m_2}(1+\frac{r}{3})
+            \end{split}
+            \quad \quad 
+            \begin{split}
+                m_2\ddot{\psi_1}=-s\psi_1-S(\psi_1-\psi_2) \\
+                \ddot{\psi_2}+\frac{2S}{m_2}\psi_2+\frac{S}{m_2}(\psi_1-\psi_2)=0 \\
+                \psi_2=A_2\cos(\omega_2 t + \phi) \\ 
+                -\omega_2^2+\frac{2S}{m_2}+\frac{S}{m_2}(1+r)=0 \\
+                \omega_2^2 = \frac{S}{m_2}(3+\frac{1}{r})
+            \end{split}
+        \end{equation*}
+        \begin{align*}
+            \omega_1 &=\omega_2 \\
+            r &=3\pm 2 \sqrt{3} \\
+            r_1 &=3-\sqrt{3}=-0.464
+        \end{align*}
         \item (b) the amplitude ratio \(\frac{A_2}{A_1}\) for the 'in-antiphase' mode
+        \begin{equation*}
+            r_2 =3+ 2 =6.464
+        \end{equation*}
         \item (c) the ratio of the mode frequencies
+        \begin{align*}
+            \omega_1^2 &=\frac{S}{m_2}(1+\frac{r}{3}) = 3.155\frac{S}{m} \\
+            \omega_2^2 &= \frac{S}{m_2}(3+\frac{1}{r})=0.845\frac{S}{m} \\
+            \frac{\omega_2}{\omega_1}&=0.518
+        \end{align*}
     \end{itemize}
     \item (8.6) Two identical simple pendulums are connected by a light spring attached to the bobs. Each bob has a mass of \(1.00\) kg, and the stiffness of the coupling spring is \(0.800\) N\(\text{m}^-1\). When one pendulum is clamped, the period of the other is found to be \(1.25\) s. Find the periods of the two modes of the system with the clamp removed. 
+    \begin{equation*}
+        \begin{split}
+            T = 1.25 s \\
+            \omega = \frac{2\pi}{T} = 5.026 \frac{1}{s} \\
+            \omega = \sqrt{\frac{g}{L}+\frac{S}{m}} \\
+            L=\frac{g}{\omega^2-\frac{S}{m}} = 0.401 m \\
+            \omega_1=\frac{g}{L}=24.46\frac{1}{s} \\
+            T_1=\frac{2\pi}{\omega_1}=0.257 s \\
+            \omega_2 = \sqrt{\frac{g}{L}+\frac{2S}{m}} =5.105 \frac{1}{s} \\
+            T_2 = 1.235 s
+        \end{split}
+    \end{equation*}
     \item Consider 4 identical simple pendulums, equally spaced on a row, and all masses are linked by identical light springswith a force constant \(s\) such that when not in vibrations all pendulums remain vertical. Use the method of transverse standing waves, find the four normal modes of this four-coordinate system and comment on their angular frequencies.
-
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=12cm,height=33cm]{6-5.jpg}
+    \end{figure}
 \end{enumerate}
 \end{document}
